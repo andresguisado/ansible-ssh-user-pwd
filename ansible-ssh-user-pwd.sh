@@ -22,4 +22,4 @@ echo $CONJUR_AUTHN_LOGIN
 echo $CONJUR_AUTHN_API_KEY
 
 echo "[INFO] Executing ansible-playbook.."
-ansible-playbook -i playbooks/inventory/hosts playbooks/ssh_user_password.yml
+ansible-playbook -i playbooks/inventory/hosts playbooks/ssh_user_pwd.yml
