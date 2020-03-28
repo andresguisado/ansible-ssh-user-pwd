@@ -2,7 +2,7 @@
 - hosts: localhost
   vars:
     username_value: "{{ lookup('conjur_variable', 'dev/secrets/targetuser') }}"
-    password_value: "{{ lookup('conjur_variable', 'dev/secrets/targetsshkey') }}"
+    password_value: "{{ lookup('conjur_variable', 'dev/secrets/targetpwd') }}"
     
   tasks:
     - name: Set Username and Password
@@ -16,7 +16,7 @@
   gather_facts: yes
   vars:
     ansible_user: "{{ hostvars['localhost']['cyberark_username'] }}"
-    ansible_ssh_private_key_file: "{{ hostvars['localhost']['cyberark_password'] }}"
+    ansible_password: "{{ hostvars['localhost']['cyberark_password'] }}"
 
   tasks:
     - name: Create a file called '/tmp/testfile.txt' with the content 'hello world'.
