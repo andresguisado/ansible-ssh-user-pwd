@@ -3,10 +3,10 @@
 CONJUR_AUTHN_API_KEY=$CONJUR_AUTHN_API_KEY
 CONJUR_AUTHN_LOGIN=$CONJUR_AUTHN_LOGIN
 
-echo "[INFO] Rename original conjur_variable.py"
-sudo mv /usr/lib/python3.6/site-packages/ansible/plugins/lookup/conjur_variable.py /usr/lib/python3.6/site-packages/ansible/plugins/lookup/orig_conjur_variable.py
-echo "[INFO] Coping new conjur_variable.py"
-sudo cp conjur_variable.py /usr/lib/python3.6/site-packages/ansible/plugins/lookup/conjur_variable.py
+#echo "[INFO] Rename original conjur_variable.py"
+#sudo mv /usr/lib/python3.6/site-packages/ansible/plugins/lookup/conjur_variable.py /usr/lib/python3.6/site-packages/ansible/plugins/lookup/orig_conjur_variable.py
+#echo "[INFO] Coping new conjur_variable.py"
+#sudo cp conjur_variable.py /usr/lib/python3.6/site-packages/ansible/plugins/lookup/conjur_variable.py
 echo "[INFO] Retrieving DAP public certificate"
 openssl s_client -showcerts -connect dap-master:443 < /dev/null 2> /dev/null | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > conjur.pem
 
