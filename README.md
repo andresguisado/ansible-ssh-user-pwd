@@ -3,7 +3,7 @@
 ## Requirements
 
 ```bash
-ansible-galaxy collection install cyberark.conjur_collection
+ansible-galaxy collection install cyberark.conjur
 ```
 
 Authors
