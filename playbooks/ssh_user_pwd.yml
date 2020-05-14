@@ -9,7 +9,7 @@
       set_fact:
         cyberark_username: "{{ username_value }}"
         cyberark_password: "{{ password_value }}"
-      #no_log: yes
+      no_log: yes
 
 - name: HelloWorld
   hosts: targets
