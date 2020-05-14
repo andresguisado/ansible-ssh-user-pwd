@@ -1,8 +1,8 @@
 ---
 - hosts: localhost
   vars:
-    username_value: "{{ lookup('cyberark.conjur_collection.conjur_variable', 'dev/secrets/targetuser') }}"
-    password_value: "{{ lookup('cyberark.conjur_collection.conjur_variable', 'dev/secrets/targetpwd') }}"
+    username_value: "{{ lookup('cyberark.conjur_variable', 'dev/secrets/targetuser') }}"
+    password_value: "{{ lookup('cyberark.conjur_variable', 'dev/secrets/targetpwd') }}"
 
   tasks:
     - name: Set Username and Password
