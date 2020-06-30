@@ -7,7 +7,7 @@ pipeline {
     stage('Ansible') {
       steps {
           withCredentials([
-                    usernamePassword(credentialsId: 'dapcreds-teamB', usernameVariable:'CONJUR_AUTHN_LOGIN', passwordVariable: 'CONJUR_AUTHN_API_KEY')]) {
+                    usernamePassword(credentialsId: 'dap-creds', usernameVariable:'CONJUR_AUTHN_LOGIN', passwordVariable: 'CONJUR_AUTHN_API_KEY')]) {
                         sh "bash ansible-ssh-user-pwd.sh"
                     }
       }
