@@ -11,7 +11,7 @@ echo "[INFO] Retrieving DAP public certificate"
 openssl s_client -showcerts -connect dap-master:443 < /dev/null 2> /dev/null | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > conjur.pem
 
 echo "[INFO] Preparing DAP parameters for ansible"
-export CONJUR_APPLIANCE_URL="https://dap-master"
+export CONJUR_APPLIANCE_URL="https://dap-master2.cyberarkdemo.net"
 export CONJUR_ACCOUNT="cybr"
 export CONJUR_CERT_FILE="conjur.pem"
 export ANSIBLE_HOST_KEY_CHECKING="False"
