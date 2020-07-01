@@ -1,8 +1,8 @@
 ---
 - hosts: localhost
   vars:
-    username_value: "{{ lookup('cyberark.conjur.conjur_variable', 'dev/secrets/targetuser', validate_certs=false) }}"
-    password_value: "{{ lookup('cyberark.conjur.conjur_variable', 'dev/secrets/targetpwd', validate_certs=false) }}"
+    username_value: "{{ lookup('cyberark.conjur.conjur_variable', 'dev/cicd/jenkins/targetuser', validate_certs=false) }}"
+    password_value: "{{ lookup('cyberark.conjur.conjur_variable', 'dev/cicd/jenkins/targetpwd', validate_certs=false) }}"
 
   tasks:
     - name: Set Username and Password
